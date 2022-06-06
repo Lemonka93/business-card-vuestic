@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <va-carousel :items="items" v-model="value" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "HomeView",
-  components: {
-    HelloWorld,
+
+  data() {
+    return {
+      value: 0,
+      items: [
+        "https://picsum.photos/1500",
+        "https://picsum.photos/1501",
+        "https://picsum.photos/1502",
+        "https://picsum.photos/1503",
+        "https://picsum.photos/1504",
+      ],
+    };
   },
 };
 </script>
